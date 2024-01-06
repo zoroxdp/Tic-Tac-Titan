@@ -1,5 +1,4 @@
 import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tic_tac_dp/colors.dart';
@@ -14,10 +13,11 @@ class GameScreen extends StatefulWidget {
 class _GameScreenState extends State<GameScreen> {
 
   List<String> displayXO = ['', '', '', '', '', '', '', '', ''];
+  String winner = '';
 
   static var customFontWhite = GoogleFonts.coiny(
     textStyle: const TextStyle(
-      color: Colors.white,
+      color: Colors.black,
       letterSpacing: 3,
       fontSize: 28,
     ),
@@ -50,7 +50,7 @@ class _GameScreenState extends State<GameScreen> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         border: Border.all(
-                          width: 5,
+                          width: 3,
                           color: MainColor.accentColor,
                         ),
                         color: MainColor.secondaryColor,
@@ -71,10 +71,11 @@ class _GameScreenState extends State<GameScreen> {
                 },
               ),
             ),
-            const Expanded(
+            Expanded(
               flex: 1,
               child: Text(
                 "Tic-Tac-DP",
+                style: customFontWhite,
               ),
             ),
           ],
@@ -111,6 +112,10 @@ class _GameScreenState extends State<GameScreen> {
         displayXO[bestmove] = 'X';
       }
     });
+    int winner = checkWinner();
+    if(winner != 0){
+
+    }
   }
 
   int minimax(int depth, bool isMaximizing) {
