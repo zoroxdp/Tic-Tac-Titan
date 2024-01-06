@@ -1,16 +1,5 @@
-# tic_tac_dp
+# Tic Tac Titan
 
-A new Flutter project.
+AI-powered Tic-Tac-Toe Game
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The Tic Tac Toe game is a two-player game where players take turns placing their marks on a 3x3 grid, and the first player to get three in a row wins. If all the spaces on the board are filled and no player has three in a row, the game is a tie. The Minimax algorithm is a decision-making algorithm that can be used to determine the optimal move for the AI player. The algorithm recursively evaluates all possible moves and returns the best score for the AI player. The code for a Tic Tac Toe game using the Minimax algorithm in Flutter is provided below. The code uses the minimax function to determine the optimal move for the AI player, the findBestMove function to find the best move for the AI player, and the checkWinner function to check if a player has won the game. The play function allows the user to play against the AI.
